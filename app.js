@@ -13,7 +13,7 @@ const { join } = require('path');
 
 const port = process.env.PORT || 5000;
 
-app.use(express.static('public'));
+app.use('/',express.static('dist'));
 
 app.get('/chat', (req,res)=>{
   res.sendFile(join(__dirname,"public","index.html"))
